@@ -1,0 +1,43 @@
+{
+    "manifest_version": 2,
+    "name": "WhatsApp Sidebar",
+    "version": "{{version}}",
+    "description": "{{description}}",
+    "author": "{{{author}}}",
+    "homepage_url": "{{{homepage}}}",
+    "applications": {
+      "gecko": {
+        "id": "whatsapp-sidebar@nosegnome.co.uk",
+        "strict_min_version": "57.0a1"
+      }
+    },
+    "commands": {
+      "toggle-whatsapp": {
+        "suggested_key": {
+          "default": "Alt+1"
+        },
+        "description": "Toggle the sidebar"
+      }
+    },
+    "background": {
+      "scripts": [
+        "build/buildSettings.js",
+        "background.js"
+      ]
+    },
+    "sidebar_action": {
+      "open_at_install": false,
+      "default_title": "WhatsApp",
+      "default_panel": "whatsapp.html",
+      "browser_style": false
+    },
+    "web_accessible_resources": [
+    ],
+    "permissions": [
+      "storage",
+      "contextMenus",
+      "webRequest",
+      "webRequestBlocking",
+      "management"
+    ]
+  }
